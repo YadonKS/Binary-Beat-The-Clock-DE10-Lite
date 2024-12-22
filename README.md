@@ -4,21 +4,23 @@ Designed to be implemented on the Intel DE10 Lite FPGA Board, this game is  beat
 # Overview
 This project is an FPGA based program that is designed to work as a digital two player game called the Beat the Clock Binary using both combinational and sequential logic. The game has a time-limit and players take turns guessing randomly generated 5-bit binary numbers. The project contains several modules in Verilog, the primary code and features. The 5-bit binary values are generated using a **random number generator**, and edge detection logic is added to make sure that the button presses are reactive for reset and pause functions. The player timers are represented by two 5-bit counters and are decremented in real-time with a **1 Hz clock** that is extracted by a **clock divider**. The game checks which timers are active, updates random numbers, and resets values as required, providing seamless gameplay. The game also employs multiple 7-segment displays to display the timers and generates random numbers after each correct guess.
  
-# Requireements
+# Requirements
 
 ## Hardware
 **Intel MAX DE-10 Lite FPGA Board**: The physical (hardware) inputs (10 switches and a button) and outputs (6 seven-segment-displays) of the game are all on this board. It can be purchased from multiple places like here for example.
 ![image](https://github.com/user-attachments/assets/dc030d5e-4bfc-4428-99ae-86ea2d07b3c7)
+
 credit: Mouser Electronics: mouser.ca
 
 **FPGA Board to PC connector**: It should come with the FPGA board. This is how it looks just incase:
+
 ![image](https://github.com/user-attachments/assets/3d74443c-6a9b-442f-8394-fe36eabc7aee)
 
 ## Software
 
 **Quartus**: I used Quartus Prime 23.1 std. You can find the appropriate version for your device here: https://www.intel.com/content/www/us/en/collections/products/fpga/software/downloads.html
 
-Note: If you are a Mac user with an Intel processor, you will have to run Quartus on a virtual machine isntead. Here is how you can do it using the free virtual machine VirtualBox: https://siytek.com/quartus-mac-virtualbox-ubuntu/#google_vignette
+Note: If you are a Mac user with an Intel processor, you will have to run Quartus on a virtual machine instead. Here is how you can do it using the free virtual machine VirtualBox: https://siytek.com/quartus-mac-virtualbox-ubuntu/#google_vignette
 
 # How to Launch
 
